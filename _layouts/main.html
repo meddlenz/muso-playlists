@@ -1,0 +1,26 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+	{%- include structure/head.html -%}
+	<body>
+		<div class="body-wrapper">
+
+			<div class="content-wrapper">
+				{{ content }}
+				{% include structure/footer.html %}
+			</div>
+
+			{% if site.data.general_settings.banner_notification.display_banner_on_all_pages %}
+				{% include structure/page-banner.html 
+					heading=site.data.general_settings.banner_notification.heading
+					content=site.data.general_settings.banner_notification.message_content_html
+					background=site.data.general_settings.banner_notification.banner_colour
+					text=site.data.general_settings.banner_notification.banner_text_colour %}
+			{% endif %}
+		</div>
+
+        {%- include structure/scripts.html -%}
+	</body>
+</html>

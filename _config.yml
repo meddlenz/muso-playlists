@@ -1,0 +1,27 @@
+
+permalink: pretty
+timezone: Pacific/Auckland
+markdown: kramdown
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+    - last 2 versions
+
+uploads_dir: "/images/uploads/:title"
+
+collections:
+  web_pages:
+    _slug: web_pages
+    name: 'Web Pages'
+    _icon: 'web'
+    _singular_name: 'Web Page'
+    output: true
+    permalink: /:title/
