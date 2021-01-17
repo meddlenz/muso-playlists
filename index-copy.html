@@ -1,0 +1,40 @@
+---
+layout: main
+title:
+---
+
+<div class="header">
+	<h1 class="editable">
+		Muso Playlists
+	</h1>
+	<p class="editable">
+		You must enter your user ID below to be able to queue songs via the Slack Muso.<br />Your user ID is the 'goose' variable at the end of your /play bookmarklet. Ask Liam for this if you don't have it, and don't share it with others.<br /><br />When saving your user ID, click yes when your browser asks to save this password.
+	</p>
+	<form action="#">
+		<input id="userID" type='password' />
+		<input value="Save User ID" type="submit" />
+	</form>
+</div>
+<div class="main">
+	{% assign video_collections = site.data.video_collections.collections %}
+	{% for collection in video_collections %}
+		<details class="main__collection">
+			<summary class="main__collection-title">{{ collection.title }}</summary>
+			<div class="main__videos">
+				{% for video in collection.videos %}
+					{% assign image = video.id | prepend: 'https://img.youtube.com/vi/' | append: '/0.jpg' %}
+
+					{% assign video_url = video.id %}
+					<a class="main__video" data-url="{{ video_url }}">
+					    <div class="main__image" style="background-image: url('{{ image }}')"></div>
+						<h1 class="main__video-title">{{ video.title }}</h1>
+						<div class="main__filler"></div>
+						<div class="main__overlay">
+						 	<p>Queue to Muso</p>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</details>
+	{% endfor %}
+</div>
