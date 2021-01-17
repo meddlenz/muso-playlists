@@ -1,11 +1,3 @@
-GIT
-  remote: https://108195f1598e2839aec3366ec4e733ac8f6d097a:x-oauth-basic@github.com/meddlenz/master-theme.git
-  revision: 58d670fb0a5a15e9967c0516cfd345f3158709bd
-  branch: master
-  specs:
-    master-theme (2.3.6)
-      jekyll (~> 4.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -82,7 +74,6 @@ DEPENDENCIES
   jekyll (= 4.0.0)
   jekyll-autoprefixer
   jekyll-include-cache
-  master-theme!
   nokogiri
 
 RUBY VERSION

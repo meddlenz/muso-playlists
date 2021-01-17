@@ -169,3 +169,34 @@ h1, h2, h3 {
 		}
 	}
 }
+
+.surprise-button {
+	position: fixed;
+	z-index: 4;
+	bottom: 10px;
+	left: 10px;
+	padding: 5px 8px;
+	background-color: #ff00fb;
+	color: #fff;
+	border-radius: 4px;
+	text-shadow: 1px 1px black;
+	box-shadow: 1px 1px 1px black;
+	cursor: pointer;
+	user-select: none;
+	transition: transform 0.4s ease-out;
+
+	&:hover {
+		background: rgb(63,94,251);
+		background: -moz-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(254,255,0,1) 0%, rgba(0,255,21,1) 29%, rgba(0,250,255,1) 42%, rgba(17,0,255,1) 58%, rgba(248,0,255,1) 81%, rgba(255,0,0,1) 100%);
+		background: -webkit-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(254,255,0,1) 0%, rgba(0,255,21,1) 29%, rgba(0,250,255,1) 42%, rgba(17,0,255,1) 58%, rgba(248,0,255,1) 81%, rgba(255,0,0,1) 100%);
+		background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(254,255,0,1) 0%, rgba(0,255,21,1) 29%, rgba(0,250,255,1) 42%, rgba(17,0,255,1) 58%, rgba(248,0,255,1) 81%, rgba(255,0,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#ff0000",GradientType=1);
+		transform: rotate(-700deg);
+		transition: transform 0.4s ease-out;
+	}
+
+	&:active {
+		padding: 30px;
+		font-size: 20px;
+	}
+}

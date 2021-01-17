@@ -1,7 +1,18 @@
+var queued = [];
+var videoElements = document.getElementsByClassName('main__video');
+var videos = [];
+var userID = document.getElementById('userID').value;
+var goose = '&goose=' + userID;
+
+function getVideos() {
+	for (count = 0; count < videoElements.length; count++) {
+		var id = videoElements[count].getAttribute('data-url');
+		videos.push(id);
+	}
+}
+
 function checkElement() {
 	var element = event.target;
-	var userID = document.getElementById('userID').value;
-	var goose = '&goose=' + userID;
 
 	if (element.classList.contains('main__overlay')) {
 		if (userID) {
@@ -13,6 +24,10 @@ function checkElement() {
 			alert('Please enter your user ID');
 		}
 	}
+
+	if (element.classList.contains('surprise-button')) {
+		shuffle();
+	}
 }
 
 async function play(goose, videoID) {
@@ -20,6 +35,37 @@ async function play(goose, videoID) {
 	fetch("https://bigelow.io/play-bookmarklet/?gander=" + fullUrl + goose);
 }
 
+function shuffle () {
+	if (videos.length < 1) {
+		console.log('Resetting Videos');
+		getVideos();
+	}
+
+	var shuffledVideo = Math.floor(Math.random() * videos.length); 
+	var video = videos[shuffledVideo];
+	console.log(video);
+
+	
+	videos.splice(video, 1);
+	play(goose, video);
+	
+
+	console.log(videos);
+	console.log(shuffledVideo);
+	videos.splice(video, 1);
+	console.log("playing: " + video);
+	console.log('........');
+}
+
+
+
+
+
+
+
+
+
+getVideos();
 document.body.addEventListener('click', checkElement);
 
 
