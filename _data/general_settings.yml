@@ -1,6 +1,8 @@
+---
 website_name: Muso Playlists
 bookmark_icons:
-  bookmark_32x32px_image:
-  bookmark_128x128px_image:
-  bookmark_167x167px_image:
-  bookmark_256x256px_image:
+  bookmark_32x32px_image: /images/uploads/32.jpg
+  bookmark_128x128px_image: /siteicon.png
+  bookmark_167x167px_image: /siteicon.png
+  bookmark_256x256px_image: /siteicon.png
+---
