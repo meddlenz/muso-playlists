@@ -1,8 +1,6 @@
 var queued = [];
 var videoElements = document.getElementsByClassName('main__video');
 var videos = [];
-var userID = document.getElementById('userID').value;
-var goose = '&goose=' + userID;
 
 function getVideos() {
 	for (count = 0; count < videoElements.length; count++) {
@@ -13,12 +11,14 @@ function getVideos() {
 
 function checkElement() {
 	var element = event.target;
+	var userID = document.getElementById('userID').value;
 
 	if (element.classList.contains('main__overlay')) {
 		if (userID) {
+			var goose = '&goose=' + userID;
 			var videoWrapper = element.closest('.main__video')
 			var videoID = videoWrapper.getAttribute('data-url');
-
+			console.log(goose);
 			play(goose, videoID);
 		} else {
 			alert('Please enter your user ID');
@@ -36,6 +36,9 @@ async function play(goose, videoID) {
 }
 
 function shuffle () {
+	var userID = document.getElementById('userID').value;
+	var goose = '&goose=' + userID;
+	
 	if (videos.length < 1) {
 		console.log('Resetting Video Array');
 		getVideos();
