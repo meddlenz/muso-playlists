@@ -37,32 +37,16 @@ async function play(goose, videoID) {
 
 function shuffle () {
 	if (videos.length < 1) {
-		console.log('Resetting Videos');
+		console.log('Resetting Video Array');
 		getVideos();
 	}
 
-	var shuffledVideo = Math.floor(Math.random() * videos.length); 
-	var video = videos[shuffledVideo];
-	console.log(video);
-
-	
-	videos.splice(video, 1);
-	play(goose, video);
-	
-
-	console.log(videos);
-	console.log(shuffledVideo);
-	videos.splice(video, 1);
+	var arrayIndex = Math.floor(Math.random() * videos.length); 
+	var video = videos[arrayIndex];
+	videos.splice(arrayIndex, 1);
 	console.log("playing: " + video);
-	console.log('........');
+	play(goose, video);
 }
-
-
-
-
-
-
-
 
 
 getVideos();
