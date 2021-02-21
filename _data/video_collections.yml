@@ -4,12 +4,8 @@ collections:
     videos:
       - title: Slavec Tomaz
         id: wDfUD4-FC0c
-      - title: Slavec Tomaz v2
-        id: eliICRgFqmU
-      - title: Slavec Tomaz v3
-        id: PLTDa7WsVLw
       - title: The Sims
-        id: 2a4sQzb-tyY
+        id: wKnkQdsITUE
       - title: Vitas - Opera 2
         id: 8-qZD6XHVCA
       - title: Vitas - 7th Element
@@ -24,10 +20,22 @@ collections:
         id: zzICMIu5zFY
       - title: Big Iron But The Recording Studio Gets Nuked
         id: QXu9vrOzph4
+      - title: Scotland the Brave
+        id: xqeYKf8tdsU
+      - title: Bohemian Rhapsody (A golfing tribute)
+        id: j3NYu9Nkvfo
   - title: LoFi
     videos:
       - title: 'Lofi hip hop mix - Beats to Relax/Study to [2018]'
         id: '-FlxM_0S2lA'
+      - title: The Sims
+        id: 2a4sQzb-tyY
+      - title: Vitas - Dedication
+        id: UYZJ1tLdiRA
+      - title: 7th Element
+        id: eRwmtjnbZlU
+      - title: Never gonna give you up
+        id: u4D1enUJYuU
   - title: DJ CENACITY
     videos:
       - title: Relaxing Wild Yodelling
